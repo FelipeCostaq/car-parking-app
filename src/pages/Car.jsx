@@ -2,6 +2,7 @@ import CarList from "../components/CarList";
 import CarAdd from "../components/CarAdd";
 import CarEdit from "../components/CarEdit";
 import CarDelete from "../components/CarDelete";
+import CarManager from "../components/CarManager";
 
 
 function Car(){
@@ -12,7 +13,7 @@ function Car(){
                 <CarEdit />
                 <CarDelete />
             </div>
-            <CarList  />
+            <CarManager />
         </div>
     )
 }
