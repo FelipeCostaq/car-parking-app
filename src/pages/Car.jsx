@@ -4,7 +4,7 @@ import CarList from "../components/CarList";
 function Car(){
     return(
         <div>
-            <CarList />
+            <CarList  />
         </div>
     )
 }

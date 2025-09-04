@@ -18,12 +18,14 @@ function CarList(){
         })
     }, []);
 
-    if (loading) return <p className="text-center mt-4">Carregando...</p>;
+    if (loading) return <div className="d-flex justify-content-center align-items-center" style={{ height: '98vh'}}>
+        <div class="spinner-border" role="status"><span className="visually-hidden">Loading...</span></div>
+    </div>;
     if (error) return <p className="text-center mt-4 text-danger">{error}</p>;
 
   return (
     <div className="container-fluid mt-5 container-table w-100">
-        <h2 className="mb-4 text-center">Carros Registrados</h2>
+        <h2 className="mb-4 text-center">Proprietários Registrados</h2>
         <div className="table-responsive w-100 shadow-sm rounded bg-white p-3">
             <table className="table table-striped table-hover table-bordered table-sm align-middle mb-0">
                 <thead className="table-dark">
