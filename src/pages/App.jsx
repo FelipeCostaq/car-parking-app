@@ -11,7 +11,7 @@ function Home() {
     <Router>
       <div className="d-flex">
         <Header/>
-        <div className="content flex-grow-1 d-flex justify-content-center align-items-center">
+        <div className="content flex-grow-1 p-2">
           <Routes>
             <Route path="/" element={<HomePage />}/>
             <Route path="/spot" element={<SpotPage />} />

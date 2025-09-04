@@ -1,7 +1,10 @@
+import CarList from "../components/CarList";
+
+
 function Car(){
     return(
         <div>
-            <h1>Gerenciar Carros</h1>
+            <CarList />
         </div>
     )
 }
