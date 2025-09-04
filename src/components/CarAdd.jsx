@@ -30,7 +30,7 @@ function CarAdd() {
       setOwner("");
       setApartment("");
 
-      const modalEl = document.getElementById("staticBackdrop");
+      const modalEl = document.getElementById("carAddModal");
       const modal = bootstrap.Modal.getInstance(modalEl);
       modal.hide();
     } catch (error) {
@@ -48,25 +48,25 @@ function CarAdd() {
         type="button"
         className="btn btn-outline-success"
         data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
+        data-bs-target="#carAddModal"
       >
         <i className="bi bi-plus-lg"></i>
       </button>
 
       <div
         className="modal fade"
-        id="staticBackdrop"
+        id="carAddModal"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabIndex="-1"
-        aria-labelledby="staticBackdropLabel"
+        aria-labelledby="carAddModalLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog">
           <div className="modal-content">
             <form onSubmit={handleSubmit}>
               <div className="modal-header">
-                <h5 className="modal-title" id="staticBackdropLabel">
+                <h5 className="modal-title" id="carAddModalLabel">
                   Adicionar Veículo
                 </h5>
                 <button
