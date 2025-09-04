@@ -3,6 +3,7 @@ nav{
 }
 
 .nav-link-custom{
+    margin-top: 15px;
     font-size: 1.35rem;
     padding: 5px;
     text-decoration: none;
