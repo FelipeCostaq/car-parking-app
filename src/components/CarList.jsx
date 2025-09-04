@@ -25,7 +25,6 @@ function CarList(){
 
   return (
     <div className="container-fluid mt-5 container-table w-100">
-        <h2 className="mb-4 text-center">Proprietários Registrados</h2>
         <div className="table-responsive w-100 shadow-sm rounded bg-white p-3">
             <table className="table table-striped table-hover table-bordered table-sm align-middle mb-0">
                 <thead className="table-dark">
