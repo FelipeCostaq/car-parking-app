@@ -1,7 +1,9 @@
+import HomeCard from "../components/HomeCard";
+
 function Home(){
     return(
         <div>
-            <h1>Página Inicial</h1>
+            <HomeCard/>
         </div>
     )
 }
