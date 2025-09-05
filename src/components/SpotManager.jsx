@@ -30,7 +30,7 @@ function SpotManager() {
 
     setLoading(true);
     try {
-      let url = "https://localhost:7148/api/ParkingSpot/";
+      let url = "https://localhost:7148/ParkingSpot/";
     switch (searchType) {
       case "id":
         url += query; 
@@ -57,30 +57,55 @@ function SpotManager() {
 
   return (
     <div className="container mt-4">
-      <form onSubmit={handleSearch} className="d-flex gap-2 mb-3">
-        <select
-          className="form-select"
-          value={searchType}
-          onChange={e => setSearchType(e.target.value)}
-        >
-          <option value="id">ID</option>
-          <option value="number">Número</option>
-          <option value="type">Tipo</option>
-          <option value="status">Status</option>
-        </select>
+        <form onSubmit={handleSearch} className="d-flex gap-2 mb-3">
+            <select
+                className="form-select"
+                value={searchType}
+                onChange={e => {
+                    setSearchType(e.target.value);
+                    setQuery(""); 
+                }}
+            >
+                <option value="id">ID</option>
+                <option value="number">Número</option>
+                <option value="type">Tipo</option>
+                <option value="status">Status</option>
+            </select>
 
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Digite a busca"
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-        />
+            {searchType === 'status' ? (
+                <select
+                    className="form-select"
+                    value={query}
+                    onChange={e => setQuery(e.target.value)}
+                >
+                    <option value="">Selecione...</option>
+                    <option value="1">Livre</option>
+                    <option value="0">Ocupado</option>
+                </select>
+            ) : searchType === 'type' ? (
+                <select
+                    className="form-select"
+                    value={query}
+                    onChange={e => setQuery(e.target.value)}
+                >
+                    <option value="">Selecione...</option>
+                    <option value="Carro">Carro</option>
+                    <option value="Moto">Moto</option>
+                </select>
+            ) : (
+                <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Digite a busca"
+                    value={query}
+                    onChange={e => setQuery(e.target.value)}
+                />
+            )}
 
-        <button type="submit" className="btn btn-primary" disabled={loading}>
-          {loading ? "Buscando..." : "Buscar"}
-        </button>
-      </form>
+            <button type="submit" className="btn btn-primary" disabled={loading}>
+                {loading ? "Buscando..." : "Buscar"}
+            </button>
+        </form>
 
       {loading ? (
         <div className="d-flex justify-content-center align-items-center" style={{ height: '50vh' }}>
