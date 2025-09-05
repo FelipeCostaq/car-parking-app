@@ -1,7 +1,9 @@
+import SpotManager from "../components/SpotManager";
+
 function Spot(){
     return(
         <div>
-            <h1>Gerenciar Vagas</h1>
+            <SpotManager />
         </div>
     )
 }

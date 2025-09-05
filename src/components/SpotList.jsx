@@ -10,10 +10,9 @@ function SpotList({ spots }) {
           <thead className="table-dark">
             <tr>
               <th>ID</th>
-              <th>Placa</th>
-              <th>Modelo</th>
-              <th>Proprietário</th>
-              <th>Apartamento</th>
+              <th>Número</th>
+              <th>Tipo</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
@@ -23,13 +22,13 @@ function SpotList({ spots }) {
                   <td>{spot.id}</td>
                   <td>{spot.number}</td>
                   <td>{spot.type}</td>
-                  <td>{spot.status}</td>
+                  <td>{spot.status === 0 ? "Ocupado" : "Livre"}</td>
                 </tr>
               ))
             ) : (
               <tr>
                 <td colSpan="5" className="text-center">
-                  Nenhum carro encontrado
+                  Nenhuma vaga encontrada
                 </td>
               </tr>
             )}
