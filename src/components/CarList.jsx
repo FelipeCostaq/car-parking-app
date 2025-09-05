@@ -1,5 +1,4 @@
 import React from 'react';
-import './CarList.css';
 
 function CarList({ cars }) {
   if (!cars) cars = [];
