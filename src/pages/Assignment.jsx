@@ -1,7 +1,12 @@
+import AssignmentManager from "../components/AssignmentManager";
+
 function Assignment(){
     return(
         <div>
-            <h1>Gerenciar Atribuições</h1>
+            <div className="d-flex gap-1">
+
+            </div>
+            <AssignmentManager />
         </div>
     )
 }

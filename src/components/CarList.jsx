@@ -1,5 +1,3 @@
-import React from 'react';
-
 function CarList({ cars }) {
   if (!cars) cars = [];
 

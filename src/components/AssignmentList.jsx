@@ -1,5 +1,5 @@
-function SpotList({ spots }) {
-  if (!spots) spots = [];
+function AssignmentList({ assignments }) {
+  if (!assignments) assignments = [];
 
   return (
     <div className="container-fluid mt-5 container-table w-100">
@@ -8,25 +8,23 @@ function SpotList({ spots }) {
           <thead className="table-dark">
             <tr>
               <th>ID</th>
-              <th>Número</th>
-              <th>Tipo</th>
-              <th>Status</th>
+              <th>ID Carro</th>
+              <th>ID Vaga</th>
             </tr>
           </thead>
           <tbody>
-            {spots.length > 0 ? (
-              spots.map((spot) => (
-                <tr key={spot.id}>
-                  <td>{spot.id}</td>
-                  <td>{spot.number}</td>
-                  <td>{spot.type}</td>
-                  <td>{spot.status === 0 ? "Ocupado" : "Livre"}</td>
+            {assignments.length > 0 ? (
+              assignments.map((assignment) => (
+                <tr key={assignment.id}>
+                  <td>{assignment.id}</td>
+                  <td>{assignment.carId}</td>
+                  <td>{assignment.spotId}</td>
                 </tr>
               ))
             ) : (
               <tr>
                 <td colSpan="5" className="text-center">
-                  Nenhuma vaga encontrada
+                  Nenhuma atribuição encontrada
                 </td>
               </tr>
             )}
@@ -37,4 +35,4 @@ function SpotList({ spots }) {
   );
 }
 
-export default SpotList;
+export default AssignmentList;
