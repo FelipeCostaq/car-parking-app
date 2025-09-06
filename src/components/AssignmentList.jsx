@@ -8,8 +8,8 @@ function AssignmentList({ assignments }) {
           <thead className="table-dark">
             <tr>
               <th>ID</th>
-              <th>ID Carro</th>
               <th>ID Vaga</th>
+              <th>ID Carro</th>
             </tr>
           </thead>
           <tbody>
@@ -17,8 +17,8 @@ function AssignmentList({ assignments }) {
               assignments.map((assignment) => (
                 <tr key={assignment.id}>
                   <td>{assignment.id}</td>
-                  <td>{assignment.carId}</td>
                   <td>{assignment.spotId}</td>
+                  <td>{assignment.carId}</td>
                 </tr>
               ))
             ) : (
