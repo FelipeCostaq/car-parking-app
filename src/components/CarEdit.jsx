@@ -82,7 +82,7 @@ function CarEdit() {
                 <div className="mb-3">
                   <label className="form-label">Id</label>
                   <input
-                    type="text"
+                    type="number"
                     className="form-control"
                     value={id}
                     onChange={(e) => setId(e.target.value)}

@@ -78,7 +78,7 @@ function SpotAdd() {
                 <div className="mb-3">
                   <label className="form-label">Numero</label>
                   <input
-                    type="text"
+                    type="number"
                     className="form-control"
                     value={number}
                     onChange={(e) => setNumber(e.target.value)}
