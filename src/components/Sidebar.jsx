@@ -4,7 +4,9 @@ import './Sidebar.css';
 function Header() {
   return (
     <div className="d-flex">
+      
       <nav className="nav flex-column p-3" style={{ width: '250px', height: '100vh' }}>
+        <h1 className="nav-link-logo" >Painel Admin</h1>
         <Link className="nav-link-custom" to="/"><i className="bi bi-house-fill"></i> Home</Link>
         <Link className="nav-link-custom" to="/car"><i class="bi bi-car-front-fill"></i> Carros</Link>
         <Link className="nav-link-custom" to="/spot"><i class="bi bi-p-square-fill"></i> Vagas</Link>
