@@ -9,7 +9,7 @@ function AssignmentList({ assignments }) {
             <tr>
               <th>ID</th>
               <th>ID Vaga</th>
-              <th>ID Carro</th>
+              <th>ID Veículo</th>
             </tr>
           </thead>
           <tbody>

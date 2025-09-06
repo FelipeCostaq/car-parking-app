@@ -1,6 +1,7 @@
 import AssignmentManager from "../components/AssignmentManager";
 import AssignmentAdd from "../components/AssignmentAdd";
 import AssignmentEdit from "../components/AssignmentEdit";
+import AssignmentDelete from "../components/AssignmentDelete";
 
 function Assignment(){
     return(
@@ -8,6 +9,7 @@ function Assignment(){
             <div className="d-flex gap-1">
                 <AssignmentAdd />
                 <AssignmentEdit />
+                <AssignmentDelete />
             </div>
             <AssignmentManager />
         </div>

@@ -104,7 +104,7 @@ function AssignmentAdd() {
                   Fechar
                 </button>
                 <button type="submit" className="btn btn-primary" disabled={loading}>
-                  {loading ? "Criando..." : "Criar Carro"}
+                  {loading ? "Criando..." : "Criar Atribuição"}
                 </button>
               </div>
             </form>
