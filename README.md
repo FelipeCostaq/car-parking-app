@@ -34,4 +34,78 @@ Um painel administrativo que permite gerenciar de forma simples e eficiente os v
 <img height="425" width="800" src="https://github.com/FelipeCostaq/car-parking-app/blob/main/img-painel-admin.png?raw=true" alt="Imagem do Painel">
 <img height="425" width="800" src="https://github.com/FelipeCostaq/car-parking-api/blob/main/img-painel-admin-table.png?raw=true" alt="Imagem do Painel Tabela">
 
+## 📋 Pré-requisitos para rodar o projeto
+
+Antes de começar, verifique se você tem os seguintes itens instalados:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/) para gerenciar pacotes
+- [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) instalado e em execução
+- [SDK do .NET 8](https://dotnet.microsoft.com/en-us/download) para rodar a API
+- [Git](https://git-scm.com/) para clonar os repositórios
+
+## 🚀 Como rodar o projeto
+
+Este projeto é dividido em **Front-end (React)** e **Back-end (.NET + SQL Server)**.  
+Siga os passos abaixo para rodar a aplicação completa.
+
+### 🔹 Clonar o repositório - Front-end
+
+# Clone o front-end
+git clone https://github.com/FelipeCostaq/car-parking-app.git
+cd car-parking-app
+
+### 🔹 Clonar os repositórios
+npm install
+# ou
+yarn install
+
+### 🔹 Instale as dependências
+npm install
+# ou
+yarn install
+
+### 🔹 Inicie a aplicação
+npm start
+# ou
+yarn start
+
+<hr>
+
+### 🔹 Clonar o repositório - Back-end
+
+# Clone o back-end
+git clone https://github.com/FelipeCostaq/car-parking-api.git
+cd car-parking-api
+
+### 🔹 Configure o banco de dados
+
+Verifique se o SQL Server está instalado e em execução.
+
+O projeto está configurado para acessar localhost.
+
+Caso sua instância seja diferente, edite a connection string no arquivo appsettings.json.
+
+"ConnectionStrings": {
+  "DefaultConnection": "Server=localhost;Database=CarParkingDB;User Id=seuUsuario;Password=suaSenha;Trusted_Connection=False;TrustServerCertificate=True;"
+}
+
+### 🔹 Rode a API
+dotnet run
+
+⚠️ Importante sobre CORS:
+A API está configurada para aceitar requisições apenas da origem **http://localhost:5173**  
+Se o seu front-end rodar em outra porta (ex.: `http://localhost:3000`), é necessário alterar a configuração de CORS no arquivo `Program.cs`:
+
+```csharp
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AllowReact",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173") // altere aqui se necessário
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
 
