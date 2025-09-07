@@ -57,17 +57,17 @@ cd car-parking-app
 
 ### 🔹 Clonar os repositórios
 npm install
-# ou
+ou
 yarn install
 
 ### 🔹 Instale as dependências
 npm install
-# ou
+ou
 yarn install
 
 ### 🔹 Inicie a aplicação
 npm start
-# ou
+ou
 yarn start
 
 <hr>
