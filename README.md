@@ -31,8 +31,7 @@ Um painel administrativo que permite gerenciar de forma simples e eficiente os v
 
 ## 📸
 
-<a href="https://portfolio-felipecosta.netlify.app/">
-  <img height="425" width="800" src="https://github.com/FelipeCostaq/car-parking-app/blob/main/img-painel-admin.png?raw=true" alt="Imagem do Painel">
-<a/>
+<img height="425" width="800" src="https://github.com/FelipeCostaq/car-parking-app/blob/main/img-painel-admin.png?raw=true" alt="Imagem do Painel">
+<img height="425" width="800" src="https://github.com/FelipeCostaq/car-parking-api/blob/main/img-painel-admin-table.png?raw=true" alt="Imagem do Painel Tabela">
 
 
